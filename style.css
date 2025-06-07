@@ -1,0 +1,322 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left a, .nav-right a {
+  margin: 0 0.8rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e63946;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger-box, .hamburger-inner {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  display: block;
+  position: relative;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  background-color: #333;
+  height: 2px;
+  width: 25px;
+  position: absolute;
+  left: 0;
+}
+.hamburger-inner::before {
+  top: -8px;
+}
+.hamburger-inner::after {
+  top: 8px;
+}
+#navLinks {
+  display: none;
+}
+
+/* Hero Section */
+.card1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fefae0;
+}
+.card1-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+.card1-content {
+  max-width: 600px;
+  margin-top: 1rem;
+  text-align: center;
+}
+.card1-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #1d3557;
+}
+.card1-content p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+.card1-content a {
+  background-color: #e63946;
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* About Section */
+.card2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f1faee;
+}
+.card2a {
+  flex: 1;
+  padding: 1rem;
+}
+.card2b img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.card2a h1 {
+  font-size: 2rem;
+  color: #457b9d;
+}
+.card2a .p {
+  margin: 1rem 0;
+}
+.card2a a {
+  text-decoration: none;
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Shop Section */
+.card3 {
+  text-align: center;
+  padding: 2rem;
+}
+.card3 h1 {
+  font-size: 2rem;
+  color: #1d3557;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+.product-card h2 {
+  margin: 0.8rem 0;
+}
+.product-card button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Recipes Section */
+.card9 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #fefae0;
+  text-align: center;
+}
+.card9 > div {
+  width: 300px;
+  margin: 1rem;
+}
+.card9 h1 {
+  font-size: 1.5rem;
+  color: #1d3557;
+}
+.card9 p {
+  margin: 0.5rem 0;
+}
+.card9 a {
+  color: #e63946;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Testimonials */
+.card6 {
+  background-color: #f1faee;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.testimonial-left, .testimonial-right {
+  flex: 1;
+  padding: 1rem;
+}
+.testimonial-card {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #e63946;
+  border-radius: 5px;
+}
+.testimonial-author {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Contact Section */
+.con {
+  padding: 2rem;
+  background-color: #fff;
+}
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contactDetails {
+  flex: 1;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button[type="submit"] {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #1d3557;
+  color: white;
+  padding: 2rem;
+}
+.footerCard1, .footerCard2 {
+  flex: 1;
+  margin: 1rem;
+}
+.footerItems {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.footerItems div p a {
+  color: #fefae0;
+  text-decoration: none;
+}
+.footerCard2 a {
+  background-color: #e63946;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-left, .nav-right {
+    display: none;
+  }
+  #navLinks {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+  }
+  #navLinks a {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  .hamburger {
+    display: block;
+  }
+  .card1, .card2, .card9, .contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+}
